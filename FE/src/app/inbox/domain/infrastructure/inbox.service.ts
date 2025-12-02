@@ -27,6 +27,8 @@ export class InboxService {
     return this.http.get<InboxRequest[]>(this.base);
   }
 
+  // for that scope in the assignments we do not need call to specific ID,
+  // using getAll() for fetching all requests whenever inbox component is loaded.
   getById(id: string): Observable<InboxRequest> {
     return this.http.get<InboxRequest>(`${this.base}/${id}`);
   }

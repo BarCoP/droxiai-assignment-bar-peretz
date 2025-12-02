@@ -1,3 +1,5 @@
+// added this file in order to set layout of components before BE is ready
+
 export interface InboxRequestItem {
   type: 'renewal' | 'freeText' | 'labReport';
   id: string;

@@ -18,6 +18,10 @@ export class InboxComponent implements OnInit {
   $requests!: Observable<InboxRequest[]>;
   requestsDemo: InboxRequestItem[] = demoRequest;
 
+
+  // since the connection to the BE did not worked, this code is commented out
+  // but whenever BE env is ready and run, we use the service, extract data to
+  // requests with subscribe and then inject it as we already have in the template
   ngOnInit(): void {
     // this.$requests = this.#inboxService.getAll();
     //

@@ -10,7 +10,6 @@ export class IconService {
   #iconRegistry = inject(MatIconRegistry);
   #sanitizer = inject(DomSanitizer);
 
-  // List of icons to register
   #icons: { name: string; path: string }[] = [
     { name: 'three-dots-vertical', path: 'icons/three-dots-vertical.svg' },
     { name: 'sort-arrow-down', path: 'icons/sort-arrow-down.svg' },
