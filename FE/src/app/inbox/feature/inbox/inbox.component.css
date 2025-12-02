@@ -30,6 +30,7 @@
 .header {
   flex: 0 0 64px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 12px;
   padding: 1px 16px;
@@ -44,12 +45,37 @@
     display: flex;
     align-items: center;
     gap: 8px;
+
+    .three-dots-vertical-icon{
+      fill: #696969;
+    }
+
+    .caret-arrow-down{
+      width: 12px;
+      height: 12px;
+    }
+
+    .sort-arrow-down{
+      width: 14px;
+      height: 14px;
+    }
   }
 
   .right-header{
     display: flex;
     align-items: center;
     gap: 8px;
+
+    .history-icon {
+      color: #B8B8B8;
+      width: 18px;
+      height: 18px;
+    }
+
+    .close-icon{
+      width: 16px;
+      height: 16px;
+    }
   }
 }
 
@@ -78,7 +104,6 @@
 .header .title {
   font-size: 15px;
   font-weight: 700;
-  /*color: #0f172a;*/
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -93,15 +118,15 @@
   width: 10px;
 }
 .body::-webkit-scrollbar-thumb {
-  /*background: #6b7280;*/
-  background: red;
   border-radius: 6px;
 }
 .body::-webkit-scrollbar-track {
-  /*background: transparent;*/
 }
 
-.icon-three-dots {
-  -webkit-mask-image: url('/assets/icons/three-dots-vertical.svg');
-  mask-image: url('/assets/icons/three-dots-vertical.svg');
+.header-label{
+  font-weight: 400;
+  font-size: 12px;
+  color: #808080;
 }
+
+

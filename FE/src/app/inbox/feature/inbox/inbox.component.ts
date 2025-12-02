@@ -1,13 +1,12 @@
-import {Component, inject, signal, Signal} from '@angular/core';
+import {Component} from '@angular/core';
+import {MatIconModule} from "@angular/material/icon";
 
 @Component({
   selector: 'app-inbox',
   standalone: true,
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './inbox.component.html',
   styleUrl: './inbox.component.css'
 })
 export class InboxComponent {
-
-
 }
