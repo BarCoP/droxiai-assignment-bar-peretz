@@ -12,8 +12,14 @@ export class RequestController implements Controller {
     }
 
     private initializeRoutes() {
+        this.router.get(this.path, this.getAllRequests.bind(this));
         this.router.get(`${this.path}/:id`, this.getRequestById.bind(this));
     }
 
     private getRequestById(req: Request, res: Response) {}
+
+    private getAllRequests(req: Request, res: Response) {
+        const requests = this.requestService.getAllRequests();
+        res.json(requests);
+    }
 }

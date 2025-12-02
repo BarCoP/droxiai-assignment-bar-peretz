@@ -1,6 +1,9 @@
 <div class="card">
   @if (cardData()) {
     <div class="card-header">
+      <mat-icon [svgIcon]='iconName$()' class="icon medicine-icon"></mat-icon>
+      <span>{{cardData().patientName}}</span>
+      <span class="timestamp">{{cardData().lastModifiedDate | date:'HH:mm dd/MM/yyyy'}}</span>
 
     </div>
 
@@ -9,6 +12,9 @@
     </div>
 
     <div class="card-footer">
+      <mat-icon svgIcon="hourglass" class="icon hourglass-icon"></mat-icon>
+      <span>{{estimatedTimeMin$()}} min.</span>
+
     </div>
   }
 </div>

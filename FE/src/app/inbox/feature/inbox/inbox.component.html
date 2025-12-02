@@ -10,9 +10,20 @@
     <section class="right-header">
       <mat-icon svgIcon="history" class="icon history-icon"></mat-icon>
       <span class="header-label">8 min. ago</span>
-      <mat-icon svgIcon="close" class="icon close-icon"></mat-icon>
+      <mat-icon svgIcon="minimize" class="icon minimize-icon"></mat-icon>
     </section>
 
   </div>
-  <div class="body">body</div>
+  <div class="body">
+    @if(requestsDemo.length > 0) {
+      @for(request of requestsDemo; track request.id){
+        <app-prescription-request [requestData]="request" />
+      }
+
+    } @else {
+      <div class="no-requests-message">
+        No requests available.
+      </div>
+    }
+  </div>
 </div>

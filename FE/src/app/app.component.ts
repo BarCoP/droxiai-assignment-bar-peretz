@@ -10,5 +10,5 @@ import {InboxComponent} from "./inbox/feature/inbox/inbox.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'FE';
+  title = 'Smart Inbox';
 }
