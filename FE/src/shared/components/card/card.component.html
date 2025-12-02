@@ -2,7 +2,7 @@
   @if (cardData()) {
     <div class="card-header">
       <mat-icon [svgIcon]='iconName$()' class="icon medicine-icon"></mat-icon>
-      <span>{{cardData().patientName}}</span>
+      <span class="patient-name">{{cardData().patientName}}</span>
       <span class="timestamp">{{cardData().lastModifiedDate | date:'HH:mm dd/MM/yyyy'}}</span>
 
     </div>
@@ -26,6 +26,16 @@
           }
         </span>
       }
+
+      @if (cardData().panels ?? [].length > 0) {
+        <span class="panels-section">
+          <mat-icon svgIcon="icon_labs" class="icon icon-labs-icon"></mat-icon>
+          @for(panel of cardData().panels; track panel; let isLast = $last) {
+            <span class="panel">{{ panel }} {{ isLast ? '' : ' ,' }}</span>
+          }
+        </span>
+      }
+
 
       @if (cardData().assignment && cardData().assignment.assignedTo) {
         <span class="assign-section">

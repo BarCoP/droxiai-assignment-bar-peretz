@@ -1,6 +1,6 @@
 .card {
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 30px;
   padding: 12px;
   margin-bottom: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -59,7 +59,7 @@
 
 .card-footer {
   display: flex;
-  /*justify-content: space-between;*/
+  flex-wrap: wrap;
   gap: 9px;
   align-items: center;
   font-size: 11px;
@@ -67,19 +67,18 @@
   .timestamp-ago, .labels .assign{
     display: flex;
     align-items: center;
-    /*gap: 4px;*/
   }
 
-  .assign-section, .labels-sections{
+  .assign-section, .labels-sections, .panels-section{
     display: flex;
     align-items: center;
   }
 
-  .assign-section{
+  .assign-section, .panels-section{
     gap: 4px;
   }
 
-  .hourglass-icon, .type-icon, .icon-inbox-icon{
+  .hourglass-icon, .type-icon, .icon-inbox-icon, .icon-labs-icon{
     width: 14px;
     height: 14px;
   }
