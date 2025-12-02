@@ -8,13 +8,31 @@
     </div>
 
     <div class="card-body">
-
+      @if(cardData().description) {
+        <span>{{cardData().description}}</span>
+      }
     </div>
 
     <div class="card-footer">
-      <mat-icon svgIcon="hourglass" class="icon hourglass-icon"></mat-icon>
-      <span>{{estimatedTimeMin$()}} min.</span>
+      <span class="timestamp-ago">
+        <mat-icon svgIcon="hourglass" class="icon hourglass-icon"></mat-icon>
+        <span>{{ estimatedTimeMin$() }} min.</span>
+      </span>
+      @if((cardData().labels ?? []).length > 0){
+        <span class="labels-sections">
+          <mat-icon svgIcon="type" class="icon type-icon"></mat-icon>
+          @for(label of cardData().labels; track label; let isLast = $last) {
+            <span class="label">{{ label }} {{ isLast ? '' : ' ,' }}</span>
+          }
+        </span>
+      }
 
+      @if (cardData().assignment && cardData().assignment.assignedTo) {
+        <span class="assign-section">
+          <mat-icon svgIcon="icon-inbox" class="icon icon-inbox-icon"></mat-icon>
+          <span>{{cardData().assignment.assignedTo}}</span>
+        </span>
+      }
     </div>
   }
 </div>

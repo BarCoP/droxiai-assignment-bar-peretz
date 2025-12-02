@@ -23,7 +23,7 @@
 
   .timestamp {
     margin-left: auto;
-    font-size: 14px
+    font-size: 11px
   }
 }
 
@@ -59,14 +59,31 @@
 
 .card-footer {
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  gap: 9px;
   align-items: center;
   font-size: 11px;
 
-  .hourglass-icon{
+  .timestamp-ago, .labels .assign{
+    display: flex;
+    align-items: center;
+    /*gap: 4px;*/
+  }
+
+  .assign-section, .labels-sections{
+    display: flex;
+    align-items: center;
+  }
+
+  .assign-section{
+    gap: 4px;
+  }
+
+  .hourglass-icon, .type-icon, .icon-inbox-icon{
     width: 14px;
     height: 14px;
   }
+
 }
 
 .status {

@@ -15,12 +15,14 @@ export class IconService {
     { name: 'three-dots-vertical', path: 'icons/three-dots-vertical.svg' },
     { name: 'sort-arrow-down', path: 'icons/sort-arrow-down.svg' },
     { name: 'grey-chevron-down', path: 'icons/grey-chevron-down.svg' },
-    { name: 'history', path: 'icons/history.svg' },
+    { name: 'sync', path: 'icons/sync.svg' },
     { name: 'minimize', path: 'icons/minimize.svg' },
     { name: 'medicine', path: 'icons/medicine.svg' },
     { name: 'message', path: 'icons/message.svg' },
     { name: 'icon_labs', path: 'icons/icon_labs.svg' },
     { name: 'hourglass', path: 'icons/hourglass.svg' },
+    { name: 'type', path: 'icons/type.svg' },
+    { name: 'icon-inbox', path: 'icons/icon-inbox.svg' },
   ];
 
   registerIcons(): void {
