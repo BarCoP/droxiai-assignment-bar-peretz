@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {InboxComponent} from "./inbox/feature/inbox/inbox.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, InboxComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

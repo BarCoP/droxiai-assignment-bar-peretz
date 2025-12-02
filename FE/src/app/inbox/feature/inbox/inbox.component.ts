@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, inject, signal, Signal} from '@angular/core';
 
 @Component({
   selector: 'app-inbox',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './inbox.component.css'
 })
 export class InboxComponent {
+
 
 }
